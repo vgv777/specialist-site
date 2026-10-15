@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში | SPECIALIST</title>
-    <meta name="description" id="meta-desc" content="სარეცხი და ჭურჭლის სარეცხი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.">
-    <meta name="keywords" content="სარეცხი მანქანების შეკეთება თბილისი, ჭურჭლის სარეცხი მანქანა, ремонт стиральных машин Тбилиси, ремонт посудомоечных машин, washing machine repair Tbilisi">
+    <title id="page-title">სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების შეკეთება თბილისში | SPECIALIST</title>
+    <meta name="description" id="meta-desc" content="სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.">
+    <meta name="keywords" content="სარეცხი მანქანების შეკეთება თბილისი, ჭურჭლის სარეცხი მანქანა, საშრობი მანქანის შეკეთება, ремонт стиральных машин Тбилиси, ремонт посудомоечных машин, ремонт сушильных машин, washing machine repair Tbilisi, dryer repair">
     <style>
         :root {
             --primary-color: #2563eb;
@@ -141,7 +141,7 @@
 
         /* Services Grid */
         .services {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 50px auto;
             padding: 0 20px;
         }
@@ -155,11 +155,17 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -271,6 +277,13 @@
                 </div>
                 <img src="https://images.unsplash.com/photo-1581622558663-b2e33377dfb2?auto=format&fit=crop&w=500&q=80" alt="Dishwasher Repair Tbilisi" class="service-img">
             </div>
+            <div class="service-card">
+                <div>
+                    <h3 id="service-3-title">საშრობი მანქანები</h3>
+                    <p id="service-3-desc">არ აშრობს, არ ათბობს, არ ბრუნავს ან ხმაურობს.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=500&q=80" alt="Tumble Dryer Repair Tbilisi" class="service-img">
+            </div>
         </div>
     </section>
 
@@ -283,8 +296,8 @@
     <script>
         const translations = {
             ka: {
-                pageTitle: "სარეცხი და ჭურჭლის სარეცხი მანქანების შეკეთება თბილისში | SPECIALIST",
-                metaDesc: "სარეცხი და ჭურჭლის სარეცხი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.",
+                pageTitle: "სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების შეკეთება თბილისში | SPECIALIST",
+                metaDesc: "სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.",
                 heroTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში",
                 heroSubtitle: "გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.",
                 ctaBtn: "გამოიძახეთ ოსტატი",
@@ -293,11 +306,13 @@
                 service1Desc: "არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.",
                 service2Title: "ჭურჭლის სარეცხი მანქანები",
                 service2Desc: "ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.",
+                service3Title: "საშრობი მანქანები",
+                service3Desc: "არ აშრობს, არ ათბობს, არ ბრუნავს ან ხმაურობს.",
                 footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია."
             },
             ru: {
-                pageTitle: "Ремонт стиральных и посудомоечных машин в Тбилиси | SPECIALIST",
-                metaDesc: "Профессиональный ремонт стиральных и посудомоечных машин в Тбилиси. Гарантия 12 месяцев.",
+                pageTitle: "Ремонт стиральных, посудомоечных и сушильных машин в Тбилиси | SPECIALIST",
+                metaDesc: "Профессиональный ремонт стиральных, посудомоечных и сушильных машин в Тбилиси. Гарантия 12 месяцев.",
                 heroTitle: "Ремонт бытовой техники в Тбилиси",
                 heroSubtitle: "Опытные мастера, 12-месячная гарантия и визит в день обращения.",
                 ctaBtn: "Вызвать мастера",
@@ -306,11 +321,13 @@
                 service1Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
                 service2Title: "Посудомоечные машины",
                 service2Desc: "Плохо моет, не греет воду или протекает.",
+                service3Title: "Сушильные машины",
+                service3Desc: "Не сушит, не греет, не крутит барабан или шумит.",
                 footerText: "© 2004–2026 SPECIALIST — Сервисный центр в Тбилиси. Все права защищены."
             },
             en: {
-                pageTitle: "Washing Machine & Dishwasher Repair in Tbilisi | SPECIALIST",
-                metaDesc: "Professional washing machine and dishwasher repair in Tbilisi. 12-month warranty.",
+                pageTitle: "Washing Machine, Dishwasher & Dryer Repair in Tbilisi | SPECIALIST",
+                metaDesc: "Professional washing machine, dishwasher and dryer repair in Tbilisi. 12-month warranty.",
                 heroTitle: "Home Appliance Repair in Tbilisi",
                 heroSubtitle: "Experienced technicians, 12-month warranty, and same-day visits.",
                 ctaBtn: "Call a Technician",
@@ -319,6 +336,8 @@
                 service1Desc: "Not draining, won't spin, vibrating heavily.",
                 service2Title: "Dishwashers",
                 service2Desc: "Poor washing performance, not heating water, or leaking.",
+                service3Title: "Tumble Dryers",
+                service3Desc: "Not drying, not heating, drum won't spin, or noisy.",
                 footerText: "© 2004–2026 SPECIALIST — Service Center in Tbilisi. All rights reserved."
             }
         };
@@ -340,6 +359,8 @@
             document.getElementById('service-1-desc').innerText = t.service1Desc;
             document.getElementById('service-2-title').innerText = t.service2Title;
             document.getElementById('service-2-desc').innerText = t.service2Desc;
+            document.getElementById('service-3-title').innerText = t.service3Title;
+            document.getElementById('service-3-desc').innerText = t.service3Desc;
             document.getElementById('footer-text').innerText = t.footerText;
         }
     </script>
