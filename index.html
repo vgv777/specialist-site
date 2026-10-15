@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში | SPECIALIST</title>
+    <meta name="description" id="meta-desc" content="სარეცხი და ჭურჭლის სარეცხი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.">
+    <meta name="keywords" content="სარეცხი მანქანების შეკეთება თბილისი, ჭურჭლის სარეცხი მანქანა, ремонт стиральных машин Тбилиси, ремонт посудомоечных машин, washing machine repair Tbilisi">
     <style>
         :root {
             --primary-color: #2563eb;
@@ -43,6 +45,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .logo {
@@ -155,9 +159,16 @@
             gap: 20px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .header-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -195,7 +206,7 @@
             width: 100%;
             max-width: 220px;
             height: 180px;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 8px;
         }
 
@@ -224,9 +235,9 @@
             <div class="header-right">
                 <!-- 3 Language Switchers -->
                 <div class="lang-switcher">
-                    <button class="lang-btn active" onclick="setLanguage('ka')">ქარ</button>
-                    <button class="lang-btn" onclick="setLanguage('ru')">Рус</button>
-                    <button class="lang-btn" onclick="setLanguage('en')">Eng</button>
+                    <button class="lang-btn active" id="btn-ka" onclick="setLanguage('ka')">ქარ</button>
+                    <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')">Рус</button>
+                    <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">Eng</button>
                 </div>
                 <a href="tel:+99532000000" class="phone-number">📞 032 000 000</a>
             </div>
@@ -251,14 +262,14 @@
                     <h3 id="service-1-title">სარეცხი მანქანები</h3>
                     <p id="service-1-desc">არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=500&q=80" alt="Washing Machine" class="service-img">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=500&q=80" alt="Washing Machine Repair Tbilisi" class="service-img">
             </div>
             <div class="service-card">
                 <div>
                     <h3 id="service-2-title">ჭურჭლის სარეცხი მანქანები</h3>
                     <p id="service-2-desc">ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1585837575652-267c041d77d4?auto=format&fit=crop&w=500&q=80" alt="Dishwasher" class="service-img">
+                <img src="https://images.unsplash.com/photo-1581622558663-b2e33377dfb2?auto=format&fit=crop&w=500&q=80" alt="Dishwasher Repair Tbilisi" class="service-img">
             </div>
         </div>
     </section>
@@ -272,7 +283,8 @@
     <script>
         const translations = {
             ka: {
-                pageTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში | SPECIALIST",
+                pageTitle: "სარეცხი და ჭურჭლის სარეცხი მანქანების შეკეთება თბილისში | SPECIALIST",
+                metaDesc: "სარეცხი და ჭურჭლის სარეცხი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.",
                 heroTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში",
                 heroSubtitle: "გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.",
                 ctaBtn: "გამოიძახეთ ოსტატი",
@@ -284,7 +296,8 @@
                 footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია."
             },
             ru: {
-                pageTitle: "Ремонт бытовой техники в Тбилиси | SPECIALIST",
+                pageTitle: "Ремонт стиральных и посудомоечных машин в Тбилиси | SPECIALIST",
+                metaDesc: "Профессиональный ремонт стиральных и посудомоечных машин в Тбилиси. Гарантия 12 месяцев.",
                 heroTitle: "Ремонт бытовой техники в Тбилиси",
                 heroSubtitle: "Опытные мастера, 12-месячная гарантия и визит в день обращения.",
                 ctaBtn: "Вызвать мастера",
@@ -296,7 +309,8 @@
                 footerText: "© 2004–2026 SPECIALIST — Сервисный центр в Тбилиси. Все права защищены."
             },
             en: {
-                pageTitle: "Home Appliance Repair in Tbilisi | SPECIALIST",
+                pageTitle: "Washing Machine & Dishwasher Repair in Tbilisi | SPECIALIST",
+                metaDesc: "Professional washing machine and dishwasher repair in Tbilisi. 12-month warranty.",
                 heroTitle: "Home Appliance Repair in Tbilisi",
                 heroSubtitle: "Experienced technicians, 12-month warranty, and same-day visits.",
                 ctaBtn: "Call a Technician",
@@ -313,11 +327,21 @@
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
 
             const t = translations[lang];
             document.getElementById('page-title').innerText = t.pageTitle;
+            document.getElementById('meta-desc').setAttribute('content', t.metaDesc);
             document.getElementById('hero-title').innerText = t.heroTitle;
             document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
             document.getElementById('cta-btn').innerText = t.ctaBtn;
-            document.getElementById('services-title').
+            document.getElementById('services-title').innerText = t.servicesTitle;
+            document.getElementById('service-1-title').innerText = t.service1Title;
+            document.getElementById('service-1-desc').innerText = t.service1Desc;
+            document.getElementById('service-2-title').innerText = t.service2Title;
+            document.getElementById('service-2-desc').innerText = t.service2Desc;
+            document.getElementById('footer-text').innerText = t.footerText;
+        }
+    </script>
+</body>
+</html>
