@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში | SPECIALIST</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --dark-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --white: #ffffff;
+            --gray: #6b7280;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--dark-color);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 5px;
+            background: var(--light-bg);
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 6px;
+            color: var(--gray);
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: var(--white);
+            color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .phone-number {
+            font-weight: bold;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background-color: #f59e0b;
+            color: var(--dark-color);
+            border: none;
+            padding: 14px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #d97706;
+            color: var(--white);
+        }
+
+        /* Services Grid */
+        .services {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background: var(--white);
+            border: 1px solid #e5e7eb;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">SPECIALIST</a>
+            
+            <div class="header-right">
+                <!-- 3 Language Switchers -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="setLanguage('ka')">ქარ</button>
+                    <button class="lang-btn" onclick="setLanguage('ru')">Рус</button>
+                    <button class="lang-btn" onclick="setLanguage('en')">Eng</button>
+                </div>
+                <a href="tel:+99532000000" class="phone-number">📞 032 000 000</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 id="hero-title">საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში</h1>
+            <p id="hero-subtitle">გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.</p>
+            <button class="cta-button" id="cta-btn" onclick="alert('Форма заявки')">გამოიძახეთ ოსტატი</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title" id="services-title">ჩვენი მომსახურება</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 id="service-1-title">მაცივრები</h3>
+                <p id="service-1-desc">არ ყინავს, აფუჭებს პროდუქტებს, ხმაურობს ან არ ირთვება.</p>
+            </div>
+            <div class="service-card">
+                <h3 id="service-2-title">სარეცხი მანქანები</h3>
+                <p id="service-2-desc">არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.</p>
+            </div>
+            <div class="service-card">
+                <h3 id="service-3-title">ჭურჭლის სარეცხი მანქანები</h3>
+                <p id="service-3-desc">ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.</p>
+            </div>
+            <div class="service-card">
+                <h3 id="service-4-title">კონდიციონერები</h3>
+                <p id="service-4-desc">ცუდად აცივებს, აქვს უსიამოვნო სუნი ან იყინება.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-text">© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია.</p>
+    </footer>
+
+    <!-- Multilingual Script -->
+    <script>
+        const translations = {
+            ka: {
+                pageTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში | SPECIALIST",
+                heroTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში",
+                heroSubtitle: "გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.",
+                ctaBtn: "გამოიძახეთ ოსტატი",
+                servicesTitle: "ჩვენი მომსახურება",
+                service1Title: "მაცივრები",
+                service1Desc: "არ ყინავს, აფუჭებს პროდუქტებს, ხმაურობს ან არ ირთვება.",
+                service2Title: "სარეცხი მანქანები",
+                service2Desc: "არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.",
+                service3Title: "ჭურჭლის სარეცხი მანქანები",
+                service3Desc: "ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.",
+                service4Title: "კონდიციონერები",
+                service4Desc: "ცუდად აცივებს, აქვს უსიამოვნო სუნი ან იყინება.",
+                footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია."
+            },
+            ru: {
+                pageTitle: "Ремонт бытовой техники в Тбилиси | SPECIALIST",
+                heroTitle: "Ремонт бытовой техники в Тбилиси",
+                heroSubtitle: "Опытные мастера, 12-месячная гарантия и визит в день обращения.",
+                ctaBtn: "Вызвать мастера",
+                servicesTitle: "Наши услуги",
+                service1Title: "Холодильники",
+                service1Desc: "Не морозит, шумит, не включается или протекает.",
+                service2Title: "Стиральные машины",
+                service2Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
+                service3Title: "Посудомоечные машины",
+                service3Desc: "Плохо моет, не греет воду или протекает.",
+                service4Title: "Кондиционеры",
+                service4Desc: "Плохо охлаждает, издает запах или замерзает.",
+                footerText: "© 2004–2026 SPECIALIST — Сервисный центр в Тбилиси. Все права защищены."
+            },
+            en: {
+                pageTitle: "Home Appliance Repair in Tbilisi | SPECIALIST",
+                heroTitle: "Home Appliance Repair in Tbilisi",
+                heroSubtitle: "Experienced technicians, 12-month warranty, and same-day visits.",
+                ctaBtn: "Call a Technician",
+                servicesTitle: "Our Services",
+                service1Title: "Refrigerators",
+                service1Desc: "Not cooling, noisy, won't turn on, or leaking.",
+                service2Title: "Washing Machines",
+                service2Desc: "Not draining, won't spin, vibrating heavily.",
+                service3Title: "Dishwashers",
+                service3Desc: "Poor washing performance, not heating water, or leaking.",
+                service4Title: "Air Conditioners",
+                service4Desc: "Poor cooling, bad odor, or freezing up.",
+                footerText: "© 2004–2026 SPECIALIST — Service Center in Tbilisi. All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update active button state
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Apply translations
+            const t = translations[lang];
+            document.getElementById('page-title').innerText = t.pageTitle;
+            document.getElementById('hero-title').innerText = t.heroTitle;
+            document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
+            document.getElementById('cta-btn').innerText = t.ctaBtn;
+            document.getElementById('services-title').innerText = t.servicesTitle;
+            document.getElementById('service-1-title').innerText = t.service1Title;
+            document.getElementById('service-1-desc').innerText = t.service1Desc;
+            document.getElementById('service-2-title').innerText = t.service2Title;
+            document.getElementById('service-2-desc').innerText = t.service2Desc;
+            document.getElementById('service-3-title').innerText = t.service3Title;
+            document.getElementById('service-3-desc').innerText = t.service3Desc;
+            document.getElementById('service-4-title').innerText = t.service4Title;
+            document.getElementById('service-4-desc').innerText = t.service4Desc;
+            document.getElementById('footer-text').innerText = t.footerText;
+        }
+    </script>
+</body>
+</html>
