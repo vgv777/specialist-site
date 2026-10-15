@@ -137,7 +137,7 @@
 
         /* Services Grid */
         .services {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 50px auto;
             padding: 0 20px;
         }
@@ -151,8 +151,14 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .service-card {
@@ -228,20 +234,12 @@
         <h2 class="section-title" id="services-title">ჩვენი მომსახურება</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3 id="service-1-title">მაცივრები</h3>
-                <p id="service-1-desc">არ ყინავს, აფუჭებს პროდუქტებს, ხმაურობს ან არ ირთვება.</p>
+                <h3 id="service-1-title">სარეცხი მანქანები</h3>
+                <p id="service-1-desc">არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.</p>
             </div>
             <div class="service-card">
-                <h3 id="service-2-title">სარეცხი მანქანები</h3>
-                <p id="service-2-desc">არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.</p>
-            </div>
-            <div class="service-card">
-                <h3 id="service-3-title">ჭურჭლის სარეცხი მანქანები</h3>
-                <p id="service-3-desc">ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.</p>
-            </div>
-            <div class="service-card">
-                <h3 id="service-4-title">კონდიციონერები</h3>
-                <p id="service-4-desc">ცუდად აცივებს, აქვს უსიამოვნო სუნი ან იყინება.</p>
+                <h3 id="service-2-title">ჭურჭლის სარეცხი მანქანები</h3>
+                <p id="service-2-desc">ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.</p>
             </div>
         </div>
     </section>
@@ -260,14 +258,10 @@
                 heroSubtitle: "გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.",
                 ctaBtn: "გამოიძახეთ ოსტატი",
                 servicesTitle: "ჩვენი მომსახურება",
-                service1Title: "მაცივრები",
-                service1Desc: "არ ყინავს, აფუჭებს პროდუქტებს, ხმაურობს ან არ ირთვება.",
-                service2Title: "სარეცხი მანქანები",
-                service2Desc: "არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.",
-                service3Title: "ჭურჭლის სარეცხი მანქანები",
-                service3Desc: "ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.",
-                service4Title: "კონდიციონერები",
-                service4Desc: "ცუდად აცივებს, აქვს უსიამოვნო სუნი ან იყინება.",
+                service1Title: "სარეცხი მანქანები",
+                service1Desc: "არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.",
+                service2Title: "ჭურჭლის სარეცხი მანქანები",
+                service2Desc: "ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.",
                 footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია."
             },
             ru: {
@@ -276,14 +270,10 @@
                 heroSubtitle: "Опытные мастера, 12-месячная гарантия и визит в день обращения.",
                 ctaBtn: "Вызвать мастера",
                 servicesTitle: "Наши услуги",
-                service1Title: "Холодильники",
-                service1Desc: "Не морозит, шумит, не включается или протекает.",
-                service2Title: "Стиральные машины",
-                service2Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
-                service3Title: "Посудомоечные машины",
-                service3Desc: "Плохо моет, не греет воду или протекает.",
-                service4Title: "Кондиционеры",
-                service4Desc: "Плохо охлаждает, издает запах или замерзает.",
+                service1Title: "Стиральные машины",
+                service1Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
+                service2Title: "Посудомоечные машины",
+                service2Desc: "Плохо моет, не греет воду или протекает.",
                 footerText: "© 2004–2026 SPECIALIST — Сервисный центр в Тбилиси. Все права защищены."
             },
             en: {
@@ -292,14 +282,10 @@
                 heroSubtitle: "Experienced technicians, 12-month warranty, and same-day visits.",
                 ctaBtn: "Call a Technician",
                 servicesTitle: "Our Services",
-                service1Title: "Refrigerators",
-                service1Desc: "Not cooling, noisy, won't turn on, or leaking.",
-                service2Title: "Washing Machines",
-                service2Desc: "Not draining, won't spin, vibrating heavily.",
-                service3Title: "Dishwashers",
-                service3Desc: "Poor washing performance, not heating water, or leaking.",
-                service4Title: "Air Conditioners",
-                service4Desc: "Poor cooling, bad odor, or freezing up.",
+                service1Title: "Washing Machines",
+                service1Desc: "Not draining, won't spin, vibrating heavily.",
+                service2Title: "Dishwashers",
+                service2Desc: "Poor washing performance, not heating water, or leaking.",
                 footerText: "© 2004–2026 SPECIALIST — Service Center in Tbilisi. All rights reserved."
             }
         };
@@ -322,10 +308,6 @@
             document.getElementById('service-1-desc').innerText = t.service1Desc;
             document.getElementById('service-2-title').innerText = t.service2Title;
             document.getElementById('service-2-desc').innerText = t.service2Desc;
-            document.getElementById('service-3-title').innerText = t.service3Title;
-            document.getElementById('service-3-desc').innerText = t.service3Desc;
-            document.getElementById('service-4-title').innerText = t.service4Title;
-            document.getElementById('service-4-desc').innerText = t.service4Desc;
             document.getElementById('footer-text').innerText = t.footerText;
         }
     </script>
