@@ -285,7 +285,7 @@
     <section class="services">
         <h2 class="section-title" id="services-title">ჩვენი მომსახურება</h2>
         <div class="services-grid">
-            <!-- Стиральная машина -->
+            <!-- სარეცხი მანქანა -->
             <div class="service-card">
                 <div>
                     <h3 id="service-1-title">სარეცხი მანქანები</h3>
@@ -296,7 +296,7 @@
                 </div>
             </div>
 
-            <!-- Посудомоечная машина -->
+            <!-- ჭურჭლის სარეცხი მანქანა -->
             <div class="service-card">
                 <div>
                     <h3 id="service-2-title">ჭურჭლის სარეცხი მანქანები</h3>
@@ -307,7 +307,7 @@
                 </div>
             </div>
 
-            <!-- Сушильная машина -->
+            <!-- საშრობი მანქანა -->
             <div class="service-card">
                 <div>
                     <h3 id="service-3-title">საშრობი მანქანები</h3>
@@ -342,4 +342,94 @@
                 service2Desc: "ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.",
                 service3Title: "საშრობი მანქანები",
                 service3Desc: "არ აშრობს, არ ათბობს, არ ბრუნავს ან ხმაურობს.",
-                footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბ
+                footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია."
+            },
+            ru: {
+                pageTitle: "Ремонт стиральных, посудомоечных и сушильных машин в Тбилиси | SPECIALIST",
+                metaDesc: "Профессиональный ремонт стиральных, посудомоечных и сушильных машин в Тбилиси. Гарантия.",
+                heroTitle: "Ремонт бытовой техники в Тбилиси",
+                heroSubtitle: "Опытные мастера, гарантия, быстрый визит",
+                heroAppliances: "Стиральная машина • Посудомоечная машина • Сушильная машина",
+                ctaBtn: "Вызвать мастера",
+                servicesTitle: "Наши услуги",
+                service1Title: "Стиральные машины",
+                service1Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
+                service2Title: "Посудомоечные машины",
+                service2Desc: "Плохо моет, не греет воду или протекает.",
+                service3Title: "Сушильные машины",
+                service3Desc: "Не сушит, не греет, не крутит барабан или шумит.",
+                footerText: "© 2004–2026 SPECIALIST — Сервисный центр в Тбилиси. Все права защищены."
+            },
+            en: {
+                pageTitle: "Washing Machine, Dishwasher & Dryer Repair in Tbilisi | SPECIALIST",
+                metaDesc: "Professional washing machine, dishwasher and dryer repair in Tbilisi. Warranty.",
+                heroTitle: "Home Appliance Repair in Tbilisi",
+                heroSubtitle: "Experienced technicians, warranty, fast visit",
+                heroAppliances: "Washing machine • Dishwasher • Tumble dryer",
+                ctaBtn: "Call a Technician",
+                servicesTitle: "Our Services",
+                service1Title: "Washing Machines",
+                service1Desc: "Not draining, won't spin, vibrating heavily.",
+                service2Title: "Dishwashers",
+                service2Desc: "Poor washing performance, not heating water, or leaking.",
+                service3Title: "Tumble Dryers",
+                service3Desc: "Not drying, not heating, drum won't spin, or noisy.",
+                footerText: "© 2004–2026 SPECIALIST — Service Center in Tbilisi. All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeBtn = document.getElementById('btn-' + lang);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            const t = translations[lang];
+            if (!t) return;
+
+            const elPageTitle = document.getElementById('page-title');
+            if (elPageTitle) elPageTitle.innerText = t.pageTitle;
+
+            const elMetaDesc = document.getElementById('meta-desc');
+            if (elMetaDesc) elMetaDesc.setAttribute('content', t.metaDesc);
+
+            const elHeroTitle = document.getElementById('hero-title');
+            if (elHeroTitle) elHeroTitle.innerText = t.heroTitle;
+
+            const elHeroSubtitle = document.getElementById('hero-subtitle');
+            if (elHeroSubtitle) elHeroSubtitle.innerText = t.heroSubtitle;
+
+            const elHeroAppliances = document.getElementById('hero-appliances');
+            if (elHeroAppliances) elHeroAppliances.innerText = t.heroAppliances;
+
+            const elCtaBtn = document.getElementById('cta-btn');
+            if (elCtaBtn) elCtaBtn.innerText = t.ctaBtn;
+
+            const elServicesTitle = document.getElementById('services-title');
+            if (elServicesTitle) elServicesTitle.innerText = t.servicesTitle;
+
+            const elS1Title = document.getElementById('service-1-title');
+            if (elS1Title) elS1Title.innerText = t.service1Title;
+
+            const elS1Desc = document.getElementById('service-1-desc');
+            if (elS1Desc) elS1Desc.innerText = t.service1Desc;
+
+            const elS2Title = document.getElementById('service-2-title');
+            if (elS2Title) elS2Title.innerText = t.service2Title;
+
+            const elS2Desc = document.getElementById('service-2-desc');
+            if (elS2Desc) elS2Desc.innerText = t.service2Desc;
+
+            const elS3Title = document.getElementById('service-3-title');
+            if (elS3Title) elS3Title.innerText = t.service3Title;
+
+            const elS3Desc = document.getElementById('service-3-desc');
+            if (elS3Desc) elS3Desc.innerText = t.service3Desc;
+
+            const elFooterText = document.getElementById('footer-text');
+            if (elFooterText) elFooterText.innerText = t.footerText;
+        }
+    </script>
+</body>
+</html>
