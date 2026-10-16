@@ -122,7 +122,6 @@
             font-weight: 500;
         }
 
-        /* УВЕЛИЧЕННЫЙ ШРИФТ ПЛАШКИ С ТЕХНИКОЙ */
         .hero p.appliances-list {
             font-size: 20px;
             font-weight: 600;
@@ -135,21 +134,37 @@
         }
 
         .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             background-color: #f59e0b;
             color: var(--dark-color);
+            text-decoration: none;
             border: none;
             padding: 14px 30px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.2s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .cta-button:hover {
             background-color: #d97706;
             color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .cta-button svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--dark-color);
+        }
+
+        .cta-button:hover svg {
+            fill: var(--white);
         }
 
         /* Services Grid */
@@ -270,7 +285,7 @@
                     <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')">Рус</button>
                     <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">Eng</button>
                 </div>
-                <a href="tel:+99532000000" class="phone-number">📞 032 000 000</a>
+                <a href="tel:+995557654117" class="phone-number">📞 557 65 41 17</a>
             </div>
         </div>
     </header>
@@ -282,7 +297,10 @@
             <p class="subtitle" id="hero-subtitle">გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი</p>
             <p class="appliances-list" id="hero-appliances">სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა</p>
             <div>
-                <button class="cta-button" id="cta-btn" onclick="alert('Форма заявки / Form')">გამოიძახეთ ოსტატი</button>
+                <a href="tel:+995557654117" class="cta-button" id="cta-btn">
+                    <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                    <span id="cta-text">გამოიძახეთ ოსტატი: 557 65 41 17</span>
+                </a>
             </div>
         </div>
     </section>
@@ -291,7 +309,7 @@
     <section class="services">
         <h2 class="section-title" id="services-title">ჩვენი მომსახურება</h2>
         <div class="services-grid">
-            <!-- Стиральная машина -->
+            <!-- სარეცხი მანქანა -->
             <div class="service-card">
                 <div>
                     <h3 id="service-1-title">სარეცხი მანქანები</h3>
@@ -302,7 +320,7 @@
                 </div>
             </div>
 
-            <!-- Посудомоечная машина -->
+            <!-- ჭურჭლის სარეცხი მანქანა -->
             <div class="service-card">
                 <div>
                     <h3 id="service-2-title">ჭურჭლის სარეცხი მანქანები</h3>
@@ -313,7 +331,7 @@
                 </div>
             </div>
 
-            <!-- Сушильная машина -->
+            <!-- საშრობი მანქანა -->
             <div class="service-card">
                 <div>
                     <h3 id="service-3-title">საშრობი მანქანები</h3>
@@ -340,7 +358,7 @@
                 heroTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში",
                 heroSubtitle: "გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი",
                 heroAppliances: "სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა",
-                ctaBtn: "გამოიძახეთ ოსტატი",
+                ctaText: "გამოიძახეთ ოსტატი: 557 65 41 17",
                 servicesTitle: "ჩვენი მომსახურება",
                 service1Title: "სარეცხი მანქანები",
                 service1Desc: "არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.",
@@ -356,7 +374,7 @@
                 heroTitle: "Ремонт бытовой техники в Тбилиси",
                 heroSubtitle: "Опытные мастера, гарантия, быстрый визит",
                 heroAppliances: "Стиральная машина • Посудомоечная машина • Сушильная машина",
-                ctaBtn: "Вызвать мастера",
+                ctaText: "Вызвать мастера: 557 65 41 17",
                 servicesTitle: "Наши услуги",
                 service1Title: "Стиральные машины",
                 service1Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
@@ -372,7 +390,7 @@
                 heroTitle: "Home Appliance Repair in Tbilisi",
                 heroSubtitle: "Experienced technicians, warranty, fast visit",
                 heroAppliances: "Washing machine • Dishwasher • Tumble dryer",
-                ctaBtn: "Call a Technician",
+                ctaText: "Call a Technician: 557 65 41 17",
                 servicesTitle: "Our Services",
                 service1Title: "Washing Machines",
                 service1Desc: "Not draining, won't spin, vibrating heavily.",
@@ -394,48 +412,4 @@
             const t = translations[lang];
             if (!t) return;
 
-            const elPageTitle = document.getElementById('page-title');
-            if (elPageTitle) elPageTitle.innerText = t.pageTitle;
-
-            const elMetaDesc = document.getElementById('meta-desc');
-            if (elMetaDesc) elMetaDesc.setAttribute('content', t.metaDesc);
-
-            const elHeroTitle = document.getElementById('hero-title');
-            if (elHeroTitle) elHeroTitle.innerText = t.heroTitle;
-
-            const elHeroSubtitle = document.getElementById('hero-subtitle');
-            if (elHeroSubtitle) elHeroSubtitle.innerText = t.heroSubtitle;
-
-            const elHeroAppliances = document.getElementById('hero-appliances');
-            if (elHeroAppliances) elHeroAppliances.innerText = t.heroAppliances;
-
-            const elCtaBtn = document.getElementById('cta-btn');
-            if (elCtaBtn) elCtaBtn.innerText = t.ctaBtn;
-
-            const elServicesTitle = document.getElementById('services-title');
-            if (elServicesTitle) elServicesTitle.innerText = t.servicesTitle;
-
-            const elS1Title = document.getElementById('service-1-title');
-            if (elS1Title) elS1Title.innerText = t.service1Title;
-
-            const elS1Desc = document.getElementById('service-1-desc');
-            if (elS1Desc) elS1Desc.innerText = t.service1Desc;
-
-            const elS2Title = document.getElementById('service-2-title');
-            if (elS2Title) elS2Title.innerText = t.service2Title;
-
-            const elS2Desc = document.getElementById('service-2-desc');
-            if (elS2Desc) elS2Desc.innerText = t.service2Desc;
-
-            const elS3Title = document.getElementById('service-3-title');
-            if (elS3Title) elS3Title.innerText = t.service3Title;
-
-            const elS3Desc = document.getElementById('service-3-desc');
-            if (elS3Desc) elS3Desc.innerText = t.service3Desc;
-
-            const elFooterText = document.getElementById('footer-text');
-            if (elFooterText) elFooterText.innerText = t.footerText;
-        }
-    </script>
-</body>
-</html>
+            const
