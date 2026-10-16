@@ -133,6 +133,11 @@
             border-radius: 25px;
         }
 
+        .cta-wrapper {
+            display: inline-block;
+            text-align: center;
+        }
+
         .cta-button {
             display: inline-flex;
             align-items: center;
@@ -165,6 +170,14 @@
 
         .cta-button:hover svg {
             fill: var(--white);
+        }
+
+        .hero-subtext {
+            margin-top: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
         }
 
         /* Services Grid */
@@ -296,11 +309,12 @@
             <h1 id="hero-title">საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში</h1>
             <p class="subtitle" id="hero-subtitle">გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი</p>
             <p class="appliances-list" id="hero-appliances">სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა</p>
-            <div>
+            <div class="cta-wrapper">
                 <a href="tel:557654117" class="cta-button" id="cta-btn">
                     <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
                     <span id="cta-text">გამოიძახეთ ოსტატი: 557 65 41 17</span>
                 </a>
+                <p class="hero-subtext" id="hero-subtext">დიაგნოსტიკა 30 ლარიდან</p>
             </div>
         </div>
     </section>
@@ -359,6 +373,7 @@
                 heroSubtitle: "გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი",
                 heroAppliances: "სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა",
                 ctaText: "გამოიძახეთ ოსტატი: 557 65 41 17",
+                heroSubtext: "დიაგნოსტიკა 30 ლარიდან",
                 servicesTitle: "ჩვენი მომსახურება",
                 service1Title: "სარეცხი მანქანები",
                 service1Desc: "არ ცლის წყალს, არ წურავს, ძლიერ ვიბრირებს.",
@@ -375,6 +390,7 @@
                 heroSubtitle: "Опытные мастера, гарантия, быстрый визит",
                 heroAppliances: "Стиральная машина • Посудомоечная машина • Сушильная машина",
                 ctaText: "Вызвать мастера: 557 65 41 17",
+                heroSubtext: "Диагностика от 30 лари",
                 servicesTitle: "Наши услуги",
                 service1Title: "Стиральные машины",
                 service1Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
@@ -391,6 +407,7 @@
                 heroSubtitle: "Experienced technicians, warranty, fast visit",
                 heroAppliances: "Washing machine • Dishwasher • Tumble dryer",
                 ctaText: "Call a Technician: 557 65 41 17",
+                heroSubtext: "Diagnostics from 35 GEL", /* Или from 30 GEL */
                 servicesTitle: "Our Services",
                 service1Title: "Washing Machines",
                 service1Desc: "Not draining, won't spin, vibrating heavily.",
@@ -429,6 +446,9 @@
 
             const elCtaText = document.getElementById('cta-text');
             if (elCtaText) elCtaText.innerText = t.ctaText;
+
+            const elHeroSubtext = document.getElementById('hero-subtext');
+            if (elHeroSubtext) elHeroSubtext.innerText = t.heroSubtext;
 
             const elServicesTitle = document.getElementById('services-title');
             if (elServicesTitle) elServicesTitle.innerText = t.servicesTitle;
