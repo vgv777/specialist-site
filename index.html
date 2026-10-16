@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების შეკეთება თბილისში | SPECIALIST</title>
-    <meta name="description" id="meta-desc" content="სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.">
+    <meta name="description" id="meta-desc" content="სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების პროფესიონალური შეკეთება თბილისში. გარანტია.">
     <meta name="keywords" content="სარეცხი მანქანების შეკეთება თბილისი, ჭურჭლის სარეცხი მანქანა, საშრობი მანქანის შეკეთება, ремонт стиральных машин Тбилиси, ремонт посудомоечных машин, ремонт сушильных машин, washing machine repair Tbilisi, dryer repair">
     <style>
         :root {
@@ -112,13 +112,24 @@
 
         .hero h1 {
             font-size: 38px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .hero p {
+        .hero p.subtitle {
             font-size: 18px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .hero p.appliances-list {
+            font-size: 16px;
             margin-bottom: 30px;
-            opacity: 0.9;
+            opacity: 0.85;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
         }
 
         .cta-button {
@@ -262,8 +273,11 @@
     <section class="hero">
         <div class="hero-container">
             <h1 id="hero-title">საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში</h1>
-            <p id="hero-subtitle">გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.</p>
-            <button class="cta-button" id="cta-btn" onclick="alert('Форма заявки / Form')">გამოიძახეთ ოსტატი</button>
+            <p class="subtitle" id="hero-subtitle">გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი</p>
+            <p class="appliances-list" id="hero-appliances">სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა</p>
+            <div>
+                <button class="cta-button" id="cta-btn" onclick="alert('Форма заявки / Form')">გამოიძახეთ ოსტატი</button>
+            </div>
         </div>
     </section>
 
@@ -271,7 +285,7 @@
     <section class="services">
         <h2 class="section-title" id="services-title">ჩვენი მომსახურება</h2>
         <div class="services-grid">
-            <!-- სარეცხი მანქანა -->
+            <!-- Стиральная машина -->
             <div class="service-card">
                 <div>
                     <h3 id="service-1-title">სარეცხი მანქანები</h3>
@@ -282,7 +296,7 @@
                 </div>
             </div>
 
-            <!-- ჭურჭლის სარეცხი მანქანა (Посудомоечная машина) -->
+            <!-- Посудомоечная машина -->
             <div class="service-card">
                 <div>
                     <h3 id="service-2-title">ჭურჭლის სარეცხი მანქანები</h3>
@@ -293,7 +307,7 @@
                 </div>
             </div>
 
-            <!-- საშრობი მანქანა -->
+            <!-- Сушильная машина -->
             <div class="service-card">
                 <div>
                     <h3 id="service-3-title">საშრობი მანქანები</h3>
@@ -316,9 +330,10 @@
         const translations = {
             ka: {
                 pageTitle: "სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების შეკეთება თბილისში | SPECIALIST",
-                metaDesc: "სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების პროფესიონალური შეკეთება თბილისში. 12-თვიანი გარანტია.",
+                metaDesc: "სარეცხი, ჭურჭლის სარეცხი და საშრობი მანქანების პროფესიონალური შეკეთება თბილისში. გარანტია.",
                 heroTitle: "საყოფაცხოვრებო ტექნიკის შეკეთება თბილისში",
-                heroSubtitle: "გამოცდილი ოსტატები, 12-თვიანი გარანტია და ვიზიტი მიმართვის დღესვე.",
+                heroSubtitle: "გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი",
+                heroAppliances: "სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა",
                 ctaBtn: "გამოიძახეთ ოსტატი",
                 servicesTitle: "ჩვენი მომსახურება",
                 service1Title: "სარეცხი მანქანები",
@@ -327,61 +342,4 @@
                 service2Desc: "ცუდად რეცხავს, არ ათბობს წყალს ან ჟონავს.",
                 service3Title: "საშრობი მანქანები",
                 service3Desc: "არ აშრობს, არ ათბობს, არ ბრუნავს ან ხმაურობს.",
-                footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბილისში. ყველა უფლება დაცულია."
-            },
-            ru: {
-                pageTitle: "Ремонт стиральных, посудомоечных и сушильных машин в Тбилиси | SPECIALIST",
-                metaDesc: "Профессиональный ремонт стиральных, посудомоечных и сушильных машин в Тбилиси. Гарантия 12 месяцев.",
-                heroTitle: "Ремонт бытовой техники в Тбилиси",
-                heroSubtitle: "Опытные мастера, 12-месячная гарантия и визит в день обращения.",
-                ctaBtn: "Вызвать мастера",
-                servicesTitle: "Наши услуги",
-                service1Title: "Стиральные машины",
-                service1Desc: "Не сливает воду, не отжимает, сильно вибрирует.",
-                service2Title: "Посудомоечные машины",
-                service2Desc: "Плохо моет, не греет воду или протекает.",
-                service3Title: "Сушильные машины",
-                service3Desc: "Не сушит, не греет, не крутит барабан или шумит.",
-                footerText: "© 2004–2026 SPECIALIST — Сервисный центр в Тбилиси. Все права защищены."
-            },
-            en: {
-                pageTitle: "Washing Machine, Dishwasher & Dryer Repair in Tbilisi | SPECIALIST",
-                metaDesc: "Professional washing machine, dishwasher and dryer repair in Tbilisi. 12-month warranty.",
-                heroTitle: "Home Appliance Repair in Tbilisi",
-                heroSubtitle: "Experienced technicians, 12-month warranty, and same-day visits.",
-                ctaBtn: "Call a Technician",
-                servicesTitle: "Our Services",
-                service1Title: "Washing Machines",
-                service1Desc: "Not draining, won't spin, vibrating heavily.",
-                service2Title: "Dishwashers",
-                service2Desc: "Poor washing performance, not heating water, or leaking.",
-                service3Title: "Tumble Dryers",
-                service3Desc: "Not drying, not heating, drum won't spin, or noisy.",
-                footerText: "© 2004–2026 SPECIALIST — Service Center in Tbilisi. All rights reserved."
-            }
-        };
-
-        function setLanguage(lang) {
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.getElementById('btn-' + lang).classList.add('active');
-
-            const t = translations[lang];
-            document.getElementById('page-title').innerText = t.pageTitle;
-            document.getElementById('meta-desc').setAttribute('content', t.metaDesc);
-            document.getElementById('hero-title').innerText = t.heroTitle;
-            document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
-            document.getElementById('cta-btn').innerText = t.ctaBtn;
-            document.getElementById('services-title').innerText = t.servicesTitle;
-            document.getElementById('service-1-title').innerText = t.service1Title;
-            document.getElementById('service-1-desc').innerText = t.service1Desc;
-            document.getElementById('service-2-title').innerText = t.service2Title;
-            document.getElementById('service-2-desc').innerText = t.service2Desc;
-            document.getElementById('service-3-title').innerText = t.service3Title;
-            document.getElementById('service-3-desc').innerText = t.service3Desc;
-            document.getElementById('footer-text').innerText = t.footerText;
-        }
-    </script>
-</body>
-</html>
+                footerText: "© 2004–2026 SPECIALIST — სერვისცენტრი თბ
