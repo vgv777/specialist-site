@@ -285,7 +285,7 @@
                     <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')">Рус</button>
                     <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">Eng</button>
                 </div>
-                <a href="tel:+995557654117" class="phone-number">📞 557 65 41 17</a>
+                <a href="tel:557654117" class="phone-number">📞 557 65 41 17</a>
             </div>
         </div>
     </header>
@@ -297,7 +297,7 @@
             <p class="subtitle" id="hero-subtitle">გამოცდილი ოსტატები, გარანტია, სწრაფი ვიზიტი</p>
             <p class="appliances-list" id="hero-appliances">სარეცხი მანქანა • ჭურჭლის სარეცხი მანქანა • საშრობი მანქანა</p>
             <div>
-                <a href="tel:+995557654117" class="cta-button" id="cta-btn">
+                <a href="tel:557654117" class="cta-button" id="cta-btn">
                     <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
                     <span id="cta-text">გამოიძახეთ ოსტატი: 557 65 41 17</span>
                 </a>
@@ -412,4 +412,48 @@
             const t = translations[lang];
             if (!t) return;
 
-            const
+            const elPageTitle = document.getElementById('page-title');
+            if (elPageTitle) elPageTitle.innerText = t.pageTitle;
+
+            const elMetaDesc = document.getElementById('meta-desc');
+            if (elMetaDesc) elMetaDesc.setAttribute('content', t.metaDesc);
+
+            const elHeroTitle = document.getElementById('hero-title');
+            if (elHeroTitle) elHeroTitle.innerText = t.heroTitle;
+
+            const elHeroSubtitle = document.getElementById('hero-subtitle');
+            if (elHeroSubtitle) elHeroSubtitle.innerText = t.heroSubtitle;
+
+            const elHeroAppliances = document.getElementById('hero-appliances');
+            if (elHeroAppliances) elHeroAppliances.innerText = t.heroAppliances;
+
+            const elCtaText = document.getElementById('cta-text');
+            if (elCtaText) elCtaText.innerText = t.ctaText;
+
+            const elServicesTitle = document.getElementById('services-title');
+            if (elServicesTitle) elServicesTitle.innerText = t.servicesTitle;
+
+            const elS1Title = document.getElementById('service-1-title');
+            if (elS1Title) elS1Title.innerText = t.service1Title;
+
+            const elS1Desc = document.getElementById('service-1-desc');
+            if (elS1Desc) elS1Desc.innerText = t.service1Desc;
+
+            const elS2Title = document.getElementById('service-2-title');
+            if (elS2Title) elS2Title.innerText = t.service2Title;
+
+            const elS2Desc = document.getElementById('service-2-desc');
+            if (elS2Desc) elS2Desc.innerText = t.service2Desc;
+
+            const elS3Title = document.getElementById('service-3-title');
+            if (elS3Title) elS3Title.innerText = t.service3Title;
+
+            const elS3Desc = document.getElementById('service-3-desc');
+            if (elS3Desc) elS3Desc.innerText = t.service3Desc;
+
+            const elFooterText = document.getElementById('footer-text');
+            if (elFooterText) elFooterText.innerText = t.footerText;
+        }
+    </script>
+</body>
+</html>
